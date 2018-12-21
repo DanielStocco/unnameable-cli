@@ -17,6 +17,10 @@ module.exports = () => {
         cmd = 'build';
     }
 
+    if (args.module || args.m) {
+        cmd = 'module';
+    }
+
     switch (cmd) {
 
         case 'build':
@@ -29,6 +33,10 @@ module.exports = () => {
 
         case 'help':
             require('./cmds/help')(args);
+            break;
+
+        case 'module':
+            require('./cmds/module')(args);
             break;
 
         default:

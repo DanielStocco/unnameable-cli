@@ -15,5 +15,5 @@ module.exports = (args) => {
     mkdir(destinationPath, 'modules');
 
 
-    console.log(args)
+    console.log(args);
 };
