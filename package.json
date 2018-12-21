@@ -1,0 +1,36 @@
+{
+  "name": "orgasmic-cli",
+  "version": "0.0.1",
+  "description": "An very useful express project generator",
+  "main": "index.js",
+  "bin": {
+    "orgasmic": "bin/outside"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielStocco/orgasmic-cli.git"
+  },
+  "preferGlobal": true,
+  "engines": {
+    "node": ">=8"
+  },
+  "keywords": [
+    "node",
+    "cli",
+    "express"
+  ],
+  "author": "Daniel Stocco <daniel.stocco@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DanielStocco/orgasmic-cli/issues"
+  },
+  "homepage": "https://github.com/DanielStocco/orgasmic-cli#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1"
+  }
+}
