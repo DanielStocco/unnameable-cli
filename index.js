@@ -1,46 +1,10 @@
-const minimist = require('minimist');
+const { version } = require('./package.json');
 
-module.exports = () => {
-    const args = minimist(process.argv.slice(2));
-
-    let cmd = args._[0] || 'help';
-
-    if (args.version || args.v) {
-        cmd = 'version';
-    }
-
-    if (args.help || args.h) {
-        cmd = 'help';
-    }
-
-    if (args.build || args.b) {
-        cmd = 'build';
-    }
-
-    if (args.module || args.m) {
-        cmd = 'module';
-    }
-
-    switch (cmd) {
-
-        case 'build':
-            require('./cmds/build')(args);
-            break;
-
-        case 'version':
-            require('./cmds/version')(args);
-            break;
-
-        case 'help':
-            require('./cmds/help')(args);
-            break;
-
-        case 'module':
-            require('./cmds/module')(args);
-            break;
-
-        default:
-            console.error(`"${cmd}" is not a valid command!`);
-            break;
-    }
-};
+require('yargs')
+    .commandDir('cmds')
+    .demandCommand()
+    .help()
+    .version('version', 'Orgasmic-cli version', version)
+    .alias('version', 'v')
+    .alias('help', 'h')
+    .argv;
