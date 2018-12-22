@@ -23,6 +23,10 @@ exports.handler = (args) => {
     const index = loadTemplate('index.js');
     index.locals.module = moduleName;
 
+    const controller = loadTemplate('controller.js');
+    index.locals.module = moduleName;
+
     mkdir('./modules', moduleName);
     write(path.join('./modules', moduleName , 'index.js'), index.render());
+    write(path.join('./modules', moduleName , `${moduleName}.controller.js`), controller.render());
 };
