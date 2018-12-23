@@ -1,4 +1,4 @@
-const { write, loadTemplate, mkdir } = require('../helpers');
+const { write, loadTemplate, mkdir } = require('../libs/helpers');
 const path = require('path');
 const _ = require('lodash');
 
@@ -21,13 +21,13 @@ exports.handler = (args) => {
      */
     const moduleName = args.name;
 
-    const index = loadTemplate('index.js');
+    const index = loadTemplate('index.js', '/modules');
     index.locals.module = moduleName;
 
-    const controller = loadTemplate('controller.js');
+    const controller = loadTemplate('controller.js', '/modules');
     controller.locals.module = moduleName;
 
-    const service = loadTemplate('service.js');
+    const service = loadTemplate('service.js', '/modules');
     service.locals.module = moduleName;
     service.locals.modelName = _.capitalize(moduleName);
 

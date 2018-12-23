@@ -1,0 +1,15 @@
+{
+    "name": "<%- appName %>",
+    "version": "<%- version %>",
+    "description": "<%- description %>",
+    "main": "<%- mainFile %>",
+    "scripts": {
+        "start": "nodemon service.js",
+        "test": "mocha test",
+        "lint": "eslint .",
+        "check4updates": "npm-check -u",
+        "report": "node_modules/es6-plato/bin/plato -r -d report ./*.js ./controllers ./drivers ./libs"
+},
+    "author": "<%- author %> <<%- email %>>",
+    "license": "<%- licence %>"
+}
