@@ -1,0 +1,42 @@
+module.exports = {
+    find,
+    findOne,
+    create,
+};
+
+const <%- modelName %> = require('./<%- module %>.model');
+
+
+
+async function find(params) {
+    console.log('-----PARAMS:', params);
+    return [
+        {
+            firstName: 'Daniel',
+            lastName: 'Stocco',
+            email: 'dstocco@olpays.com'
+        },
+        {
+        firstName: 'Daniel',
+        lastName: 'Stocco',
+        email: 'dstocco@olpays.com'
+        }
+    ];
+}
+
+async function findOne(params) {
+    console.log('-----PARAMS:', params);
+    return {
+        firstName: 'Daniel',
+        lastName: 'Stocco',
+        email: 'dstocco@olpays.com'
+        };
+}
+
+async function create(<%- module %>) {
+    const new<%- modelName %> = new <%-modelName%>(<%- module %>);
+    return await new<%- modelName %>.save();
+}
+
+
+

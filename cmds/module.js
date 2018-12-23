@@ -1,5 +1,6 @@
 const { write, loadTemplate, mkdir } = require('../helpers');
 const path = require('path');
+const _ = require('lodash');
 
 exports.command = 'module <name>';
 exports.desc = 'Create a new module named <name>';
@@ -24,9 +25,16 @@ exports.handler = (args) => {
     index.locals.module = moduleName;
 
     const controller = loadTemplate('controller.js');
-    index.locals.module = moduleName;
+    controller.locals.module = moduleName;
+
+    const service = loadTemplate('service.js');
+    service.locals.module = moduleName;
+    service.locals.modelName = _.capitalize(moduleName);
+
+
 
     mkdir('./modules', moduleName);
     write(path.join('./modules', moduleName , 'index.js'), index.render());
     write(path.join('./modules', moduleName , `${moduleName}.controller.js`), controller.render());
+    write(path.join('./modules', moduleName , `${moduleName}.service.js`), service.render());
 };
