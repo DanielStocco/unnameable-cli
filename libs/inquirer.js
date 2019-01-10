@@ -66,7 +66,7 @@ function askPackageJsonData() {
         {
             name: 'version',
             type: 'input',
-            message: 'Licence type',
+            message: 'version',
             default: '1.0.0',
             validate: (value) => {
                 // @@TODO: Validar el tipo de entrada de versión sea correcto.
@@ -80,7 +80,7 @@ function askPackageJsonData() {
             name: 'mainFile',
             type: 'input',
             message: 'entry app file',
-            default: 'app.js',
+            default: 'app',
             validate: (value) => {
                 // @@TODO: Validar el tipo de entrada de versión sea correcto.
                 // if (!value.length) {

@@ -4,12 +4,16 @@
     "description": "<%- description %>",
     "main": "<%- mainFile %>",
     "scripts": {
-        "start": "nodemon service.js",
+        "start": "node <%- mainFile %>.js",
         "test": "mocha test",
         "lint": "eslint .",
         "check4updates": "npm-check -u",
         "report": "node_modules/es6-plato/bin/plato -r -d report ./*.js ./controllers ./drivers ./libs"
-},
+    },
     "author": "<%- author %> <<%- email %>>",
-    "license": "<%- licence %>"
+    "license": "<%- licence %>",
+    "dependencies": {
+        "orgasmic-core": "^0.0.2",
+        "config": "^3.0.1"
+    }
 }

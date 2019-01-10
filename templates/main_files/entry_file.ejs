@@ -1,0 +1,9 @@
+const config = require('config');
+const { orgasmic } = require('orgasmic-core');
+const { initialize, run } = orgasmic;
+
+const { app,  logger } = initialize(config);
+
+run();
+
+
