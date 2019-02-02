@@ -1,9 +1,8 @@
 const config = require('config');
 const { orgasmic } = require('orgasmic-core');
 const { initialize, run } = orgasmic;
+const { router } = require('./router');
 
-const { app,  logger } = initialize(config);
+const { app,  logger } = initialize(config, router);
 
 run();
-
-
