@@ -2,7 +2,9 @@ const config = require('config');
 const { orgasmic } = require('orgasmic-core');
 const { initialize, run } = orgasmic;
 const { router } = require('./router');
-
 const { app,  logger } = initialize(config, router);
+
+const { plugins } = require('./plugins');
+run(plugins);
 
 run();
