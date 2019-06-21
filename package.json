@@ -1,17 +1,17 @@
 {
-  "name": "orgasmic-cli",
+  "name": "unnameable-cli",
   "version": "0.0.6",
   "description": "An very useful express project generator",
   "main": "index.js",
   "bin": {
-    "orgasmic": "bin/outside"
+    "unnameable": "bin/outside"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DanielStocco/orgasmic-cli.git"
+    "url": "git+https://github.com/DanielStocco/unnameable-cli.git"
   },
   "preferGlobal": true,
   "engines": {
@@ -25,9 +25,9 @@
   "author": "Daniel Stocco <daniel.stocco@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DanielStocco/orgasmic-cli/issues"
+    "url": "https://github.com/DanielStocco/unnameable-cli/issues"
   },
-  "homepage": "https://github.com/DanielStocco/orgasmic-cli#readme",
+  "homepage": "https://github.com/DanielStocco/unnameable-cli#readme",
   "dependencies": {
     "ejs": "^2.6.1",
     "inquirer": "^6.2.1",
